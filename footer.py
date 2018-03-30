@@ -73,7 +73,7 @@ def create_footer():
         'font-size': '1.2em',
         'background-color': theme['background-color'],
         'padding': '1rem',  # '0.5em',
-        #'width': '100%',
+        #  'width': '100%',
         'bottom': '0',
         'right': '0',
         'left': '0',

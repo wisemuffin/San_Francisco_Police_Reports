@@ -2,20 +2,20 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
-
-import plotly.plotly as py
-import plotly.graph_objs as go
-
-import pandas as pd
-import numpy as np
-from datetime import datetime
-import pandas_datareader.data as web
+# from dash.dependencies import Input, Output
+#
+# import plotly.plotly as py
+# import plotly.graph_objs as go
+#
+# import pandas as pd
+# import numpy as np
+# from datetime import datetime
+# import pandas_datareader.data as web
 
 from footer import create_footer
 
 # test imports
-import json
+# import json
 
 external_css = [
     # dash stylesheet
