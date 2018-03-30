@@ -40,11 +40,9 @@ app.config['suppress_callback_exceptions'] = True
 
 
 app.layout = html.Div(children=[
-    html.Div([
-        html.H1(children='San Fran Police Reports', style={'display': 'inline-block'}),
-    ],),
 
     dcc.Markdown('''
+        # San Fran Police Reports
         This data includes incidents from the San Francisco Police Department (SFPD) Crime Incident Reporting system, from January 2003 until the present (2 weeks ago from current date). The dataset is updated daily.
         Documentation on the data: [San Francisco Police data](https://cloud.google.com/bigquery/public-data/sfpd-reports).
         
