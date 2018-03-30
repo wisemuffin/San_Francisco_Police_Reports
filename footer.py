@@ -80,6 +80,7 @@ def create_footer():
         'text-align': 'centre',
         # 'position': 'absolute'
         'position': 'relative'
+        # 'position': 'fixed'
     }
     footer = html.Footer(div, style=footer_style)
     return footer

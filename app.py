@@ -59,13 +59,34 @@ app.layout = html.Div(children=[
     #                 style={'border': 'none', 'width': '50%', 'height': 500, 'display': 'inline-block'}),
     # ],),
 
-    html.Iframe(srcDoc=open('JupyterNotebooks/heatmap_withtime_SFPD.html', 'r').read(),
-                style={'border': 'none', 'width': 700, 'height': 500, 'display': 'inline-block'}),
-    html.Iframe(srcDoc=open('JupyterNotebooks/popup_SFPD.html', 'r').read(),
-                style={'border': 'none', 'width': 700, 'height': 500, 'display': 'inline-block'}),
+    html.Div(children=[
 
+        html.Div(children=[
+            dcc.Markdown('''
+                ### Heat Map with a time dimension
+                Use the video options to loop through the tme dimension
+                ***
+                '''.replace('  ', ''), className='container',
+                         containerProps={'style': {'maxWidth': '650px'}}),
+            html.Iframe(srcDoc=open('JupyterNotebooks/heatmap_withtime_SFPD.html', 'r').read(),
+                        style={'border': 'none', 'width': 700, 'height': 500, 'display': 'inline-block', 'padding': 20})
+        ], style={'display': 'inline-block'}),
+
+        html.Div(children=[
+            dcc.Markdown('''
+                ### Map with popups of incidents
+                Click tool tips for data on each incident
+                ***
+                '''.replace('  ', ''), className='container',
+                         containerProps={'style': {'maxWidth': '650px'}}),
+            html.Iframe(srcDoc=open('JupyterNotebooks/popup_SFPD.html', 'r').read(),
+                        style={'border': 'none', 'width': 700, 'height': 500, 'display': 'inline-block', 'padding': 20})
+        ], style={'display': 'inline-block'})
+    ], style={'text-align': 'center'}),
+
+    html.Div(children=[], style={'border': 'none', 'height': 50}),
     create_footer()
-], style={'text-align': 'center'})
+])
 
 
 # Choose the CSS styly you like
