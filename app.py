@@ -52,16 +52,20 @@ app.layout = html.Div(children=[
         '''.replace('  ', ''), className='container',
                  containerProps={'style': {'maxWidth': '650px'}}),
 
-    html.Div([
-        html.Iframe(srcDoc=open('JupyterNotebooks/heatmap_withtime_SFPD.html', 'r').read(),
-                    style={'border': 'none', 'width': '50%', 'height': 500, 'display': 'inline-block'}),
-        html.Iframe(srcDoc=open('JupyterNotebooks/popup_SFPD.html', 'r').read(),
-                    style={'border': 'none', 'width': '50%', 'height': 500, 'display': 'inline-block'}),
-    ],
+    # html.Div([
+    #     html.Iframe(srcDoc=open('JupyterNotebooks/heatmap_withtime_SFPD.html', 'r').read(),
+    #                 style={'border': 'none', 'width': '50%', 'height': 500, 'display': 'inline-block'}),
+    #     html.Iframe(srcDoc=open('JupyterNotebooks/popup_SFPD.html', 'r').read(),
+    #                 style={'border': 'none', 'width': '50%', 'height': 500, 'display': 'inline-block'}),
+    # ],),
 
-    ),
+    html.Iframe(srcDoc=open('JupyterNotebooks/heatmap_withtime_SFPD.html', 'r').read(),
+                style={'border': 'none', 'width': 700, 'height': 500, 'display': 'inline-block'}),
+    html.Iframe(srcDoc=open('JupyterNotebooks/popup_SFPD.html', 'r').read(),
+                style={'border': 'none', 'width': 700, 'height': 500, 'display': 'inline-block'}),
+
     create_footer()
-])
+], style={'text-align': 'center'})
 
 
 # Choose the CSS styly you like
