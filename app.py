@@ -45,8 +45,10 @@ app.layout = html.Div(children=[
     ],),
 
     dcc.Markdown('''
-
-        [San Francisco Police data](https://cloud.google.com/bigquery/public-data/sfpd-reports).
+        This data includes incidents from the San Francisco Police Department (SFPD) Crime Incident Reporting system, from January 2003 until the present (2 weeks ago from current date). The dataset is updated daily.
+        Documentation on the data: [San Francisco Police data](https://cloud.google.com/bigquery/public-data/sfpd-reports).
+        
+        > This app demonstrates both the us of Google's BigQuery API to handle large volumes of data and Folium a python library based on Leaflet.js for creating stunning maps.
 
         ***
         '''.replace('  ', ''), className='container',
